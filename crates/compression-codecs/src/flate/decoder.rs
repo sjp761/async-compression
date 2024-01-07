@@ -6,7 +6,7 @@ use std::io;
 #[derive(Debug)]
 pub struct FlateDecoder {
     zlib_header: bool,
-    decompress: Decompress,
+    pub decompress: Decompress,
 }
 
 impl FlateDecoder {

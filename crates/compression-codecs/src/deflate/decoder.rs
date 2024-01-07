@@ -4,7 +4,7 @@ use std::io::Result;
 
 #[derive(Debug)]
 pub struct DeflateDecoder {
-    inner: FlateDecoder,
+    pub inner: FlateDecoder,
 }
 
 impl Default for DeflateDecoder {
