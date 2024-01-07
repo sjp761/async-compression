@@ -185,6 +185,10 @@ macro_rules! impl_decoder {
             pub fn into_inner(self) -> W {
                 self.writer.into_inner()
             }
+
+            pub fn decoder_mut(&mut self) -> &mut D {
+                &mut self.decoder
+            }
         }
 
         impl<W: AsyncWrite, D: DecodeV2> Decoder<W, D> {

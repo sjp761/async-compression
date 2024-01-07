@@ -33,6 +33,10 @@ impl<R: AsyncWrite, D> AsyncWrite for Decoder<R, D> {
         self.get_pin_mut().poll_write(cx, buf)
     }
 
+    fn decoder_mut(&mut self) -> &mut D {
+        &mut self.decoder
+    }
+
     fn poll_flush(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>> {
         self.get_pin_mut().poll_flush(cx)
     }
