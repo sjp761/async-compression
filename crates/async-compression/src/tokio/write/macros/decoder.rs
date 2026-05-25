@@ -33,7 +33,7 @@ macro_rules! decoder {
         }
 
         impl<$inner> $name<$inner> {
-            pub fn inner_mut(&mut self) -> &mut crate::tokio::write::Decoder<$inner, crate::codec::$name> {
+            pub fn inner_mut(&mut self) -> &mut crate::tokio::write::Decoder<$inner, crate::codecs::$name> {
                 &mut self.inner
             }
 
